@@ -2,8 +2,10 @@
 <?PHP
 function ft_split($str)
 {
-	$my_tab = preg_split("/\s+/", $str);
+	if (gettype($str) != "string")
+		exit;
+	$cut = trim($str);
+	$my_tab = preg_split("/\s/", $cut);
 	return ($my_tab);
 }
-print_r(ft_split("Hello    World AAA"));
 ?>
