@@ -2,8 +2,6 @@
 <?PHP
 function ft_is_sort($tab)
 {
-	if (gettype(&tab) != "array")
-		return (0);
 	$length = count($tab);
 	$i = 0;
 	while ($i < $length)
@@ -18,5 +16,5 @@ function ft_is_sort($tab)
 		$i++;
 	}
 	return (1);
-}
+	}
 ?>
