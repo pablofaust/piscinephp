@@ -1,20 +1,19 @@
 #!/usr/bin/php
 <?PHP
-function ft_is_sort($tab)
-{
-	$length = count($tab);
-	$i = 0;
-	while ($i < $length)
+	function ft_is_sort($tab)
 	{
-		$j = $i + 1;
-		while ($j < $length)
-		{
-			if ($tab[$i] > $tab[$j])
-				return (0);
-			$j++;
-		}
-		$i++;
-	}
-	return (1);
+		print_r($tab);
+		$tmp1 = $tab;
+		$tmp2 = $tab;
+		sort($tmp1);
+		rsort($tmp2);
+		print_r($tmp1);
+		print_r($tmp2);
+		if ($tab === $tmp1)
+			return (true);
+		else if ($tab === $tmp2)
+			return (true);
+		else
+			return (false);
 	}
 ?>

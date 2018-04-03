@@ -1,7 +1,10 @@
 #!/usr/bin/php
 <?PHP
-	if ($argc < 4)
-	return (NULL);
+	if ($argc != 4)
+	{
+		echo "Incorrect Parameters\n";
+		return (NULL);
+	}
 	for ($i = 1; $i < $argc; $i++)
 		$args[] = trim($argv[$i]);
 	if ($args[1] == "+")

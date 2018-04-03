@@ -1,11 +1,13 @@
 #!/usr/bin/php
 <?PHP
-function ft_split($str)
-{
-	if (gettype($str) != "string")
-		exit;
-	$cut = trim($str);
-	$my_tab = preg_split("/\s/", $cut);
-	return ($my_tab);
-}
+	function ft_split($str)
+	{
+		if (gettype($str) != "string")
+			exit;
+		$str = trim($str);
+		$str = preg_replace('/\s+/', ' ', $str);
+		$my_tab = (explode(' ', $str));
+		sort($my_tab);
+		return ($my_tab);
+	}
 ?>

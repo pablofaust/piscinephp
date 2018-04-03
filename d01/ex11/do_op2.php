@@ -37,8 +37,6 @@
 
 	function do_op($splits, $sep)
 	{
-		echo $sep."\n";
-		print_r($splits);
 		if ($sep == '+')
 			return ($splits[0] + $splits[1]);
 		else if ($sep == '-')
@@ -55,7 +53,8 @@
 
 	if ($argc != 2)
 		return (NULL);
-	$sep = get_sep($argv[1]);
+	if (!($sep = get_sep($argv[1])))
+		return (NULL);
 	$splits = explode($sep, $argv[1]);
 	if ((count($splits)) != 2)
 	{
